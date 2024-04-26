@@ -1,5 +1,7 @@
 package pruebas;
 
+import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -16,7 +18,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.PageRegisterUser;
 
-public class RegisterTestSuite {
+public class TestSuiteRegister {
     
     WebDriver driver;
     PageRegisterUser registerUser;
@@ -57,12 +59,12 @@ public class RegisterTestSuite {
         registerUser.paisResidenciaDeportista("Colombia");
         registerUser.ciudadResidenciaDeportista("Bogotá");
         registerUser.tiempoResidenciaDeportista("10");
-        registerUser.seleccionDeporteDeportista("Atletismo");
-        registerUser.correoDeportista("yirzajes"+numero1+"@gmail.com");
-        registerUser.contrasenaDeportista("Ratica"+numero2+"*");
+        registerUser.seleccionDeporteDeportista("Ciclismo");
+        registerUser.correoDeportista("yirzajes"+(int)numero1+"@gmail.com");
+        registerUser.contrasenaDeportista("Ratica"+(int)numero2+"*");
         WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromViewport(10, 10);
         new Actions(driver)
-                .scrollFromOrigin(scrollOrigin, 0, 200)
+                .scrollFromOrigin(scrollOrigin, 0, 300)
                 .perform();
         registerUser.aceptaNotificacionesDeportista();
         registerUser.aceptarTyCDeportista();
@@ -70,6 +72,7 @@ public class RegisterTestSuite {
         registerUser.btnAceptarDeportista();
         textoActual = driver.findElement(By.xpath("//div[contains(text(),' Plan Basico ')]")).getText();
         assertEquals(textoActual, textoEsperado);
+      
 
     }
 

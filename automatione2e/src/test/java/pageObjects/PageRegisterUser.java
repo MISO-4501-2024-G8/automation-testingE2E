@@ -53,7 +53,7 @@ public class PageRegisterUser {
     @FindBy(id = "residenceSeniority")
     WebElement tiempoResidencia;
 
-    @FindBy(id = "sports")
+    @FindBy(xpath = "//*[@id=\"sports\"]/option[2]")
     WebElement seleccionDeporte;
 
     @FindBy(id = "email")
@@ -139,8 +139,9 @@ public class PageRegisterUser {
     }
 
     public void seleccionDeporteDeportista(String deporte){
-        Select se = new Select(seleccionDeporte);
-        se.selectByValue(deporte);;
+        //Select se = new Select(seleccionDeporte);
+        //se.selectByValue(deporte);;
+    	seleccionDeporte.click();
     }
 
     public void correoDeportista(String email){

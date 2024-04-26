@@ -1,3 +1,6 @@
-/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pruebas/PruebaHome.java
-/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pruebas/BaseTestSuite.java
+/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pageObjects/PageRegisterUser.java
+/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pageObjects/PageRegisterPartner.java
+/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pruebas/TestSuiteRegisterPartner.java
+/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pruebas/TestSuiteBase.java
 /Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pageObjects/PageSignIn.java
+/Users/vladimiryirsa/Documents/Maestria/ProyectoII/Automatizacion/automation-testingE2E/automatione2e/src/test/java/pruebas/TestSuiteRegister.java

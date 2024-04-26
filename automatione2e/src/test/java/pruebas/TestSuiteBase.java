@@ -1,7 +1,7 @@
 package pruebas;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.PageSignIn;
 
-public class BaseTestSuite {
+public class TestSuiteBase {
 
     WebDriver driver;
     PageSignIn tuEspacioInicial;

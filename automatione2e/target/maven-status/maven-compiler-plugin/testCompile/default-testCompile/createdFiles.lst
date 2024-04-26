@@ -1,3 +1,6 @@
-pruebas/PruebaHome.class
 pageObjects/PageSignIn.class
-pruebas/BaseTestSuite.class
+pageObjects/PageRegisterUser.class
+pruebas/TestSuiteRegister.class
+pruebas/TestSuiteBase.class
+pruebas/TestSuiteRegisterPartner.class
+pageObjects/PageRegisterPartner.class

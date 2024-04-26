@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-25T23:59:15 COT" name="Suite" finished-at="2024-04-25T23:59:39 COT" duration-ms="23870">
+    <groups>
+    </groups>
+    <test started-at="2024-04-25T23:59:15 COT" name="Test" finished-at="2024-04-25T23:59:39 COT" duration-ms="23870">
+      <class name="pruebas.TestSuiteRegisterPartner">
+        <test-method is-config="true" signature="abrirNavegador()[pri:0, instance:pruebas.TestSuiteRegisterPartner@6892b3b6]" started-at="2024-04-25T23:59:34 COT" name="abrirNavegador" finished-at="2024-04-25T23:59:37 COT" duration-ms="2814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abrirNavegador -->
+        <test-method signature="registroSocio()[pri:0, instance:pruebas.TestSuiteRegisterPartner@6892b3b6]" started-at="2024-04-25T23:59:37 COT" name="registroSocio" finished-at="2024-04-25T23:59:39 COT" duration-ms="1709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registroSocio -->
+        <test-method is-config="true" signature="cerrarNavegador()[pri:0, instance:pruebas.TestSuiteRegisterPartner@6892b3b6]" started-at="2024-04-25T23:59:39 COT" name="cerrarNavegador" finished-at="2024-04-25T23:59:39 COT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarNavegador -->
+      </class> <!-- pruebas.TestSuiteRegisterPartner -->
+      <class name="pruebas.TestSuiteBase">
+        <test-method is-config="true" signature="abrirNavegador()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:15 COT" name="abrirNavegador" finished-at="2024-04-25T23:59:21 COT" duration-ms="6049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abrirNavegador -->
+        <test-method signature="clickTuEspacioIngresar()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:21 COT" name="clickTuEspacioIngresar" finished-at="2024-04-25T23:59:23 COT" duration-ms="1739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTuEspacioIngresar -->
+        <test-method is-config="true" signature="cerrarNavegador()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:23 COT" name="cerrarNavegador" finished-at="2024-04-25T23:59:24 COT" duration-ms="1311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarNavegador -->
+        <test-method is-config="true" signature="abrirNavegador()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:24 COT" name="abrirNavegador" finished-at="2024-04-25T23:59:26 COT" duration-ms="2555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abrirNavegador -->
+        <test-method signature="clickTuEspacioSalir()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:26 COT" name="clickTuEspacioSalir" finished-at="2024-04-25T23:59:27 COT" duration-ms="956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickTuEspacioSalir -->
+        <test-method is-config="true" signature="cerrarNavegador()[pri:0, instance:pruebas.TestSuiteBase@5d534f5d]" started-at="2024-04-25T23:59:27 COT" name="cerrarNavegador" finished-at="2024-04-25T23:59:28 COT" duration-ms="614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarNavegador -->
+      </class> <!-- pruebas.TestSuiteBase -->
+      <class name="pruebas.TestSuiteRegister">
+        <test-method is-config="true" signature="abrirNavegador()[pri:0, instance:pruebas.TestSuiteRegister@11392934]" started-at="2024-04-25T23:59:28 COT" name="abrirNavegador" finished-at="2024-04-25T23:59:31 COT" duration-ms="2764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abrirNavegador -->
+        <test-method signature="registroDeportista()[pri:0, instance:pruebas.TestSuiteRegister@11392934]" started-at="2024-04-25T23:59:31 COT" name="registroDeportista" finished-at="2024-04-25T23:59:33 COT" duration-ms="2665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registroDeportista -->
+        <test-method is-config="true" signature="cerrarNavegador()[pri:0, instance:pruebas.TestSuiteRegister@11392934]" started-at="2024-04-25T23:59:33 COT" name="cerrarNavegador" finished-at="2024-04-25T23:59:34 COT" duration-ms="608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarNavegador -->
+      </class> <!-- pruebas.TestSuiteRegister -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
