@@ -1,0 +1,35 @@
+name: building-and-deployment-qa
+
+on:
+    push:
+      branches:
+        - qa
+        - feature/*
+        - fix/*
+  
+    workflow_dispatch:
+  
+env:
+    variable1: "valor1"
+  
+jobs:
+    build-qa:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Set up JDK 17
+         shell: bash
+         run: |
+          sudo apt-get update
+          sudo apt-get install -y openjdk-17-jdk-headless
+          sudo update-alternatives --set java /usr/lib/jvm/java-17-
+
+            echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
+            echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd
+        - uses: actions/setup-java@v4
+          with:
+            java-version: '17'
+            distribution: 'temurin'
+        - name: Build with Maven
+          run: mvn -B package --file pom.xml
+
