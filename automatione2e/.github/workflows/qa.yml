@@ -1,7 +1,5 @@
 name: building-and-deployment-qa
 
-name: Selenium Tests
-
 on:
   push:
     branches:
