@@ -1,0 +1,32 @@
+name: building-and-deployment-qa
+
+on:
+    push:
+      branches:
+        - qa
+        - feature/*
+        - fix/*
+  
+    workflow_dispatch:
+  
+env:
+    variable1: "valor1"
+  
+jobs:
+    build-qa:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: install dependencies
+          shell: bash
+          run: |
+            echo "hello world"
+  
+    integration-test-qa:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: test
+          shell: bash
+          run: echo "estoy en las pruebas de integracion"
+
