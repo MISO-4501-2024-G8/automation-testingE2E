@@ -3,9 +3,18 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="pruebas.TestSuiteBase"/>
-      <class name="pruebas.TestSuiteRegister"/>
-      <class name="pruebas.TestSuiteRegisterPartner"/>
+      <class name="pruebas.TestSuiteBase">
+      		<parameter name="Caso" value="Login"></parameter>
+      </class>
+      <class name="pruebas.TestSuiteLoginSalir">
+      		<parameter name="Caso" value="LoginBtnSalir"></parameter>
+      </class>
+      <class name="pruebas.TestSuiteRegister">
+      		<parameter name="Caso" value="Registro Usuario Deportista"></parameter>
+      </class>
+      <class name="pruebas.TestSuiteRegisterPartner">
+      		<parameter name="Caso" value="Registro Usuario Socio"></parameter>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
