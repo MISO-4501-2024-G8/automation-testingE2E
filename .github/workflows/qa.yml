@@ -6,6 +6,7 @@ on:
       - main
       - qa
       - feature/*
+      - feature
       - bugfix/*
       - hotfix/*
 
