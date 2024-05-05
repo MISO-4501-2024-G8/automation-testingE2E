@@ -1,6 +1,0 @@
-pageObjects/PageSignIn.class
-pageObjects/PageRegisterUser.class
-pruebas/TestSuiteRegister.class
-pruebas/TestSuiteBase.class
-pruebas/TestSuiteRegisterPartner.class
-pageObjects/PageRegisterPartner.class
