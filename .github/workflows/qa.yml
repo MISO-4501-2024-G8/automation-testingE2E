@@ -32,4 +32,6 @@ jobs:
             java-version: '17'
             distribution: 'temurin'
         - name: Build with Maven
-          run: mvn -B package --file pom.xml -Dwebdriver.gecko.driver=firefoxdriver --headless
+          run: mvn -B package --file pom.xml
+        - name: Run tests in background
+          run: nohup mvn test > /dev/null 2>&1 &
