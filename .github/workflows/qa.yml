@@ -34,6 +34,6 @@ jobs:
         run: mvn clean install -B
 
       - name: Run Selenium Tests
-        run: mvn clean test -Dtest=NombreDeTuClaseDePruebas -Dwebdriver.chrome.driver=chromedriver --headless
+        run: mvn clean test -Dtest='**/pom.xml' -Dwebdriver.chrome.driver=chromedriver --headless
 
 
