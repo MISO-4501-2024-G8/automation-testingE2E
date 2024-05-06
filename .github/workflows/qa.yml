@@ -3,9 +3,12 @@ name: building-and-deployment-qa
 on:
     push:
       branches:
+        - main
         - qa
         - feature/*
-        - fix/*
+        - feature
+        - bugfix/*
+        - hotfix/*
   
     workflow_dispatch:
   
