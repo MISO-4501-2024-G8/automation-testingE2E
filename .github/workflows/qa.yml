@@ -39,18 +39,18 @@ jobs:
       with:
         timeout_minutes: 30
         max_attempts: 3
-        command: mvn -B test -Dtest=!Record*
+        command: mvn -B package --file pom.xml
     - name: Run tests on Mac
       if: matrix.os == 'macos-latest'
       uses: nick-fields/retry@v3.0.0
       with:
         timeout_minutes: 30
         max_attempts: 3
-        command: mvn -B test -Dtest=!Docker*,!Record*
+        command: mvn -B package --file pom.xml
     - name: Run tests on Windows
       if: matrix.os == 'windows-latest'
       uses: nick-fields/retry@v3.0.0
       with:
         timeout_minutes: 30
         max_attempts: 3
-        command: mvn -B test -Dtest=!Docker*    
+        command: mvn -B package --file pom.xml   
