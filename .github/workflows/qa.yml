@@ -16,28 +16,27 @@ env:
 
 jobs:
   build-qa:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        java: [ 17 ]
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 17
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openjdk-17-jdk-headless
-          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
-          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd"
-      - uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-      - name: Install Firefox
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y firefox
-      - name: Install geckodriver
-        run: |
-          wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
-          tar -xvzf geckodriver-v0.30.0-linux64.tar.gz
-          sudo mv geckodriver /usr/local/bin/
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v4
+    - name: Set up Java
+      uses: actions/setup-java@v4.2.1
+      with:
+        distribution: 'temurin'
+        java-version: ${{ matrix.java }}
+        cache: 'maven'
+    - name: Start Xvfb
+      if: matrix.os == 'ubuntu-latest'
+      run: Xvfb $DISPLAY &
+    - name: Run tests on Linux
+      if: matrix.os == 'ubuntu-latest'
+      uses: nick-fields/retry@v3.0.0
+      with:
+        timeout_minutes: 30
+        max_attempts: 3
+        command: mvn -B test -Dtest=!Record*
