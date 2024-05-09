@@ -41,7 +41,7 @@ jobs:
         run: mvn clean test
 
       - name: Upload test report as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: Reportes-Automatizacion/reportePruebasRegresion.html
