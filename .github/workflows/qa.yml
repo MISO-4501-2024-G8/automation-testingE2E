@@ -16,7 +16,7 @@ env:
 
 jobs:
   selenium_tests:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
   
     steps:
       - name: Checkout repository
@@ -40,8 +40,7 @@ jobs:
           GECKO_VERSION=$(wget -qO- https://api.github.com/repos/mozilla/geckodriver/releases/latest | jq -r '.tag_name')
           wget https://github.com/mozilla/geckodriver/releases/download/$GECKO_VERSION/geckodriver-$GECKO_VERSION-linux64.tar.gz
           tar -xvzf geckodriver-$GECKO_VERSION-linux64.tar.gz
-          sudo mv geckodriver /usr/local/bin/
-          export PATH=$PATH:/usr/local/bin/
+          sudo mv geckodriver /Users/vladimiryirsa/.cache/selenium/geckodriver/mac64/0.34.0
   
       - name: Run Selenium tests
         run: mvn clean test
