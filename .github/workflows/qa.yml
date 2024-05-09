@@ -29,14 +29,14 @@ jobs:
           distribution: 'adopt'
   
       - name: Install Maven
-        run: brew install maven -y
+        run: brew install maven
   
       - name: Install Firefox and GeckoDriver
         run: |
           brew update
-          brew install -y firefox
-          brew install -y wget
-          brew install -y jq
+          brew install firefox
+          brew install wget
+          brew install jq
           GECKO_VERSION=$(wget -qO- https://api.github.com/repos/mozilla/geckodriver/releases/latest | jq -r '.tag_name')
           wget https://github.com/mozilla/geckodriver/releases/download/$GECKO_VERSION/geckodriver-$GECKO_VERSION-linux64.tar.gz
           tar -xvzf geckodriver-$GECKO_VERSION-linux64.tar.gz
