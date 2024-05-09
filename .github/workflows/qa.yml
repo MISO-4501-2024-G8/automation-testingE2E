@@ -39,3 +39,9 @@ jobs:
   
       - name: Run Selenium tests
         run: mvn clean test
+
+      - name: Upload test report as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: Reportes-Automatizacion/reportePruebasRegresion.html
